@@ -1,0 +1,249 @@
+
+:root {
+    --background: #101112;
+    --surface: #191a1b;
+    --gold: #d6ad60;
+    --gold-light: #f0d59a;
+    --text: #f5f3ee;
+    --muted: #b8b5ad;
+    --border: #353535;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+header {
+    min-height: 300px;
+    padding: 65px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+        linear-gradient(90deg, #080909 0%, #111314e8 48%, #11131480 100%),
+        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=85")
+        center 55% / cover no-repeat;
+    border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+    max-width: 700px;
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+header h1::after {
+    content: ".";
+    color: var(--gold);
+}
+
+header p {
+    color: #dedbd4;
+    max-width: 550px;
+    margin: 18px 0 0;
+    font-size: 1.05rem;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 36px;
+    padding: 16px 20px;
+    background: #111213f5;
+    border-bottom: 1px solid var(--border);
+}
+
+nav a,
+footer a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+nav a:hover,
+footer a:hover {
+    color: var(--gold-light);
+}
+
+main {
+    width: min(1120px, 90%);
+    margin: 0 auto;
+}
+
+section {
+    padding: 48px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+h2 {
+    margin: 0 0 10px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    line-height: 1.25;
+    font-weight: 600;
+}
+
+section > p {
+    color: var(--muted);
+    margin-top: 8px;
+}
+
+#gallery img {
+    display: inline-block;
+    width: calc(33.333% - 12px);
+    height: 220px;
+    margin: 18px 12px 0 0;
+    object-fit: cover;
+    vertical-align: top;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+#gallery img:last-of-type {
+    margin-right: 0;
+}
+
+#gallery img:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+}
+
+#videos iframe {
+    display: block;
+    width: 100%;
+    max-width: 760px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    margin: 24px 0;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #000;
+}
+
+a {
+    color: var(--gold-light);
+}
+
+#contact form {
+    max-width: 650px;
+    margin-top: 24px;
+}
+
+#contact form p {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--muted);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 13px 15px;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid #424242;
+    border-radius: 7px;
+    font: inherit;
+}
+
+input:focus,
+textarea:focus {
+    outline: 1px solid var(--gold);
+    border-color: var(--gold);
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 13px 20px;
+    background: var(--gold);
+    color: #15120c;
+    border: 1px solid var(--gold);
+    border-radius: 7px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background: var(--gold-light);
+}
+
+footer {
+    padding: 28px 5%;
+    text-align: center;
+    color: var(--muted);
+    background: #0b0c0d;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 6px 0;
+}
+
+#lightbox {
+    padding: 24px;
+}
+
+#lightbox img {
+    border-radius: 5px;
+}
+
+/* Responsive design for phones and tablets */
+@media (max-width: 700px) {
+    header {
+        min-height: 260px;
+        padding: 45px 6%;
+    }
+
+    nav {
+        gap: 8px 18px;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    section {
+        padding: 35px 0;
+    }
+
+    #gallery img {
+        width: 100%;
+        height: 230px;
+        margin: 12px 0 0;
+    }
+
+    #videos iframe {
+        width: 100%;
+    }
+}

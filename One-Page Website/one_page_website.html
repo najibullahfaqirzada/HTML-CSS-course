@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cars &amp; Automobiles</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
     <header id="home">
         <h1>Cars &amp; Automobiles</h1>
         <p>Discover amazing cars, automotive technology, and the joy of driving.</p>
@@ -22,7 +22,6 @@
     </nav>
 
     <main>
-
         <section>
             <h2>Welcome to the World of Cars</h2>
             <p>
@@ -38,18 +37,24 @@
 
             <img
                 src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+                data-full="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&amp;fit=crop&amp;w=1200&amp;q=90"
                 alt="Sports car"
-                width="400">
+                width="400"
+                loading="lazy">
 
             <img
                 src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+                data-full="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&amp;fit=crop&amp;w=1200&amp;q=90"
                 alt="Luxury sports car"
-                width="400">
+                width="400"
+                loading="lazy">
 
             <img
                 src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+                data-full="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&amp;fit=crop&amp;w=1200&amp;q=90"
                 alt="Performance automobile"
-                width="400">
+                width="400"
+                loading="lazy">
         </section>
 
         <section id="videos">
@@ -68,10 +73,9 @@
 
             <p>
                 If the embedded video does not play, watch it directly on YouTube:
-                <a
-                    href="https://www.youtube.com/watch?v=x2fSiGotjjU"
-                    target="_blank"
-                    rel="noopener noreferrer">
+                <a href="https://www.youtube.com/watch?v=x2fSiGotjjU"
+                   target="_blank"
+                   rel="noopener noreferrer">
                     Watch the automotive video
                 </a>
             </p>
@@ -84,36 +88,23 @@
             <form action="#" method="get">
                 <p>
                     <label for="name">Your Name:</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required>
+                    <input type="text" id="name" name="name" required>
                 </p>
 
                 <p>
                     <label for="email">Your Email:</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required>
+                    <input type="email" id="email" name="email" required>
                 </p>
 
                 <p>
                     <label for="message">Your Message:</label><br>
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="5"
-                        cols="40"
-                        required></textarea>
+                    <textarea id="message" name="message"
+                              rows="5" cols="40" required></textarea>
                 </p>
 
                 <button type="submit">Send Message</button>
             </form>
         </section>
-
     </main>
 
     <footer>
@@ -122,5 +113,6 @@
         <a href="#home">Back to Top</a>
     </footer>
 
+    <script src="JS/one_page_website.js"></script>
 </body>
 </html>
